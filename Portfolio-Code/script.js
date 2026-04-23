@@ -209,7 +209,31 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlider();
   initActiveNav();
   initCustomCursor();
+  initAboutSlideshow();
 });
+
+/* ── ABOUT SLIDESHOW ───────────────────────────────────────── */
+function initAboutSlideshow() {
+  const track = document.querySelector('.about__slideshow-track');
+  if (!track) return;
+
+  const slides = Array.from(track.querySelectorAll('.about__slide'));
+  let current  = 0;
+
+  const goTo = (idx) => {
+    slides[current].classList.remove('is-active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('is-active');
+  };
+
+  // Auto-advance every 3.5s, pause on hover
+  let timer = setInterval(() => goTo(current + 1), 3500);
+  const wrap = track.closest('.about__slideshow');
+  wrap.addEventListener('mouseenter', () => clearInterval(timer));
+  wrap.addEventListener('mouseleave', () => {
+    timer = setInterval(() => goTo(current + 1), 3500);
+  });
+}
 
 /* ── 8. CUSTOM CURSOR + SHOOTING STAR TRAIL ────────────────── */
 function initCustomCursor() {
