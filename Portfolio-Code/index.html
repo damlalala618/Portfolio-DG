@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio von Damla Gedikli – Interaction Design Studentin an der HfG Schwäbisch Gmünd." />
+  <title>Damla Gedikli Designs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="materials/dg-logo-favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div id="custom-cursor"></div>
+  <!-- ══════════════════════════ NAVIGATION ══════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+
+      <!-- Logo: animated D shape + name -->
+      <a href="index.html" class="nav__logo" aria-label="Zur Startseite">
+        <img src="materials/dg-logo-no-bg.png"
+             alt="DG Logo"
+             class="nav__logo-icon" />
+        <span class="nav__logo-name">Damla Gedikli</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="#projekte"   class="nav__link">Projekte</a>
+        <a href="#ueber-mich" class="nav__link">Über mich</a>
+        <a href="#kontakt"    class="nav__link">Kontakt</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__hamburger"
+              aria-label="Menü öffnen"
+              aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <nav class="nav__mobile" aria-label="Mobile Navigation">
+      <a href="#projekte"   class="nav__mobile-link">Projekte</a>
+      <a href="#ueber-mich" class="nav__mobile-link">Über mich</a>
+      <a href="#kontakt"    class="nav__mobile-link">Kontakt</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ══════════════════════════ HERO ══════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Willkommen">
+      <div class="hero__content container">
+
+        <div class="hero__name fade-in" aria-label="Damla Gedikli">
+          <img src="materials/name-1.png"
+               alt="Damla"
+               class="hero__name-img hero__name-img--1" />
+
+          <p class="hero__tagline" aria-hidden="true"><span class="hero__tagline-word">inter</span>&nbsp; <span class="hero__tagline-word">action</span>&nbsp;&nbsp; <span class="hero__tagline-word">designer</span></p>
+
+          <img src="materials/name-2.png"
+               alt="Gedikli"
+               class="hero__name-img hero__name-img--2" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════ PROJEKTE PREVIEW ══════════════════════════ -->
+    <section class="projects-preview section" id="projekte">
+      <!-- Decorative background blob -->
+      <div class="section-blob" aria-hidden="true"></div>
+
+      <div class="container">
+        <h2 class="section__title reveal">Projekte</h2>
+
+        <!-- 3 × 2 project card grid (6 preview cards) -->
+        <div class="projects-grid stagger" role="list">
+
+          <article class="project-card" role="listitem"
+                   data-href="Project Pages/projekt1.html"
+                   aria-label="Rapido Reisemobile – Redesign">
+            <div class="project-card__img-wrap">
+              <!-- Add your image at assets/projects/projekt1/preview.jpg -->
+              <img src="assets/projects/projekt1/preview.jpg"
+                   alt="Rapido Reisemobile Redesign"
+                   class="project-card__img" loading="lazy"
+                   onerror="this.style.display='none'" />
+            </div>
+            <h3 class="project-card__title">Rapido Reisemobile &nbsp;|&nbsp; Redesign</h3>
+          </article>
+
+          <article class="project-card" role="listitem"
+                   data-href="Project Pages/projekt2.html"
+                   aria-label="Tea-Rex – Innovative Design">
+            <div class="project-card__img-wrap">
+              <img src="assets/projects/projekt2/preview.jpg"
+                   alt="Tea-Rex Innovative Design"
+                   class="project-card__img" loading="lazy"
+                   onerror="this.style.display='none'" />
+            </div>
+            <h3 class="project-card__title">Tea-Rex &nbsp;|&nbsp; Innovative Design</h3>
+          </article>
+
+          <article class="project-card" role="listitem"
+                   data-href="Project Pages/projekt3.html"
+                   aria-label="World Life Expectancy – Datenvisualisierung">
+            <div class="project-card__img-wrap">
+              <img src="assets/projects/projekt3/preview.jpg"
+                   alt="World Life Expectancy Datenvisualisierung"
+                   class="project-card__img" loading="lazy"
+                   onerror="this.style.display='none'" />
+            </div>
+            <h3 class="project-card__title">World Life Expectancy &nbsp;|&nbsp; Datenvisualisierung</h3>
+          </article>
+
+          <article class="project-card" role="listitem"
+                   data-href="Project Pages/projekt4.html"
+                   aria-label="Timelapse – Watchface Design">
+            <div class="project-card__img-wrap">
+              <img src="assets/projects/projekt4/preview.jpg"
+                   alt="Timelapse Watchface Design"
+                   class="project-card__img" loading="lazy"
+                   onerror="this.style.display='none'" />
+            </div>
+            <h3 class="project-card__title">Timelapse &nbsp;|&nbsp; Watchface Design</h3>
+          </article>
+
+          <article class="project-card" role="listitem"
+                   data-href="Project Pages/projekt5.html"
+                   aria-label="GrippR – Controller Interface Design">
+            <div class="project-card__img-wrap">
+              <img src="assets/projects/projekt5/preview.jpg"
+                   alt="GrippR Controller Interface Design"
+                   class="project-card__img" loading="lazy"
+                   onerror="this.style.display='none'" />
+            </div>
+            <h3 class="project-card__title">GrippR &nbsp;|&nbsp; Controller Interface Design</h3>
+          </article>
+
+          <article class="project-card" role="listitem"
+                   data-href="Project Pages/projekt6.html"
+                   aria-label="Ease – Application Invention">
+            <div class="project-card__img-wrap">
+              <img src="assets/projects/projekt6/preview.jpg"
+                   alt="Ease Application Invention"
+                   class="project-card__img" loading="lazy"
+                   onerror="this.style.display='none'" />
+            </div>
+            <h3 class="project-card__title">Ease &nbsp;|&nbsp; Application Invention</h3>
+          </article>
+
+        </div><!-- /projects-grid -->
+
+        <div class="section__cta reveal">
+          <a href="projekte.html" class="btn btn--outline">mehr Projekte</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════ ÜBER MICH ════════════════════════════ -->
+    <section class="about section" id="ueber-mich">
+      <div class="container">
+        <div class="about__grid">
+
+          <!-- Left column: intro + photo -->
+          <div class="about__left">
+            <h2 class="section__title reveal">Über mich</h2>
+            <p class="about__intro-text reveal"><em>Hi, I'm Damla</em></p>
+            <p class="about__body reveal">
+              Ich bin Studentin im Bereich Interaktionsdesign, Freelance-Designerin,
+              Usability-Consultant und UX-Testerin. Meine Arbeit verbindet gestalterische
+              Intuition mit nutzerzentrierten Methoden – mit dem Ziel, digitale Erlebnisse
+              zu schaffen, die sowohl funktional als auch bedeutungsvoll sind.
+            </p>
+            <!-- Photo – replace src with your actual portrait -->
+            <div class="about__photo reveal">
+              <img src="assets/about-photo.jpg"
+                   alt="Portrait von Damla Gedikli"
+                   loading="lazy"
+                   onerror="this.style.display='none'" />
+            </div>
+          </div>
+
+          <!-- Right column: timeline -->
+          <div class="about__right">
+            <div class="timeline" role="list">
+
+              <div class="timeline__item reveal" role="listitem">
+                <div class="timeline__dot" aria-hidden="true"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">2024–Present</span>
+                  <h4 class="timeline__title">Brand Designer</h4>
+                  <p class="timeline__org">Freelance</p>
+                  <p class="timeline__desc">
+                    Focus on human-computer interaction, inclusive design,
+                    and design-research technologies.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item reveal" role="listitem">
+                <div class="timeline__dot" aria-hidden="true"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">2024</span>
+                  <h4 class="timeline__title">Usability – UX Tester</h4>
+                  <p class="timeline__org">Design Consultancy, Schwäbisch Gmünd</p>
+                  <p class="timeline__desc">
+                    Involved in research projects, created prototypes,
+                    facilitated co-design workshops.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline__item reveal" role="listitem">
+                <div class="timeline__dot" aria-hidden="true"></div>
+                <div class="timeline__content">
+                  <span class="timeline__date">2023–Present</span>
+                  <h4 class="timeline__title">IxM Interaction Design</h4>
+                  <p class="timeline__org">Hochschule für Gestaltung Schwäbisch Gmünd</p>
+                  <p class="timeline__desc">
+                    Explored various design disciplines, developed
+                    visual communication skills.
+                  </p>
+                </div>
+              </div>
+
+            </div><!-- /timeline -->
+          </div>
+
+        </div><!-- /about__grid -->
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ MEINE SKILLS ════════════════════════ -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="skills__grid">
+
+          <!-- Left: title + description -->
+          <div class="skills__left reveal">
+            <h2 class="skills__title">Meine Skills:<br>Soft and Hard</h2>
+            <p class="skills__desc">A versatile toolkit for end-to-end product design</p>
+          </div>
+
+          <!-- Right: floating tool icons -->
+          <div class="skills__icons reveal" aria-label="Design- und Entwicklungswerkzeuge">
+
+            <div class="skill-icon skill-icon--figma" title="Figma" aria-label="Figma">
+              <!-- Simplified Figma logo mark -->
+              <svg width="36" height="36" viewBox="0 0 38 56" fill="none"
+                   aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="17" height="17" rx="8.5" fill="white" opacity=".8"/>
+                <rect x="20" y="1" width="17" height="17" rx="8.5" fill="white" opacity=".6"/>
+                <rect x="1" y="20" width="17" height="17" rx="8.5" fill="white" opacity=".8"/>
+                <rect x="20" y="20" width="17" height="17" rx="8.5" fill="white" opacity=".6"/>
+                <rect x="1" y="39" width="17" height="17" rx="8.5" fill="white" opacity=".8"/>
+              </svg>
+            </div>
+
+            <div class="skill-icon skill-icon--ai" title="Adobe Illustrator" aria-label="Adobe Illustrator">
+              <span class="skill-icon__label">Ai</span>
+            </div>
+
+            <div class="skill-icon skill-icon--ae" title="Adobe After Effects" aria-label="Adobe After Effects">
+              <span class="skill-icon__label">Ae</span>
+            </div>
+
+            <div class="skill-icon skill-icon--ps" title="Adobe Photoshop" aria-label="Adobe Photoshop">
+              <span class="skill-icon__label">Ps</span>
+            </div>
+
+            <div class="skill-icon skill-icon--sketch" title="Sketch" aria-label="Sketch">
+              <span class="skill-icon__label">Sk</span>
+            </div>
+
+            <div class="skill-icon skill-icon--html" title="HTML5" aria-label="HTML5">
+              <span class="skill-icon__label">HTML5</span>
+            </div>
+
+            <div class="skill-icon skill-icon--css" title="CSS3" aria-label="CSS3">
+              <span class="skill-icon__label">CSS3</span>
+            </div>
+
+            <div class="skill-icon skill-icon--blender" title="Blender" aria-label="Blender">
+              <span class="skill-icon__label">Bl</span>
+            </div>
+
+          </div><!-- /skills__icons -->
+
+        </div><!-- /skills__grid -->
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ KONTAKT ══════════════════════════════ -->
+    <section class="contact section" id="kontakt">
+      <div class="container">
+        <div class="contact__inner reveal">
+
+          <!-- Decorative leaf / logo mark -->
+          <svg class="contact__deco" viewBox="0 0 60 60" fill="none"
+               aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="19" cy="38" rx="13" ry="20"
+                     transform="rotate(-18 19 38)"
+                     fill="#8896D4" opacity="0.6"/>
+            <ellipse cx="38" cy="38" rx="13" ry="20"
+                     transform="rotate(18 38 38)"
+                     fill="#3D51A0" opacity="0.7"/>
+          </svg>
+
+          <h2 class="contact__title">Lass uns Zusammen Arbeiten!</h2>
+
+          <p class="contact__text">
+            Ich bin derzeit offen für Praktika und freiberufliche Projekte.
+            Wenn du an etwas Interessantem arbeitest oder einfach nur über Design
+            plaudern möchtest, melde Dich gerne bei mir:
+          </p>
+
+          <div class="contact__actions">
+            <a href="mailto:damla.gdkl@gmail.com" class="btn btn--email">
+              <!-- Mail icon -->
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              damla.gdkl@gmail.com
+            </a>
+
+            <div class="contact__socials">
+              <!-- Replace # with your actual profile URLs -->
+              <a href="https://www.linkedin.com/in/damla-gedikli-618dg/"
+                 class="contact__social-link"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="LinkedIn Profil öffnen">
+                LinkedIn ↗
+              </a>
+              <a href="https://github.com/damlalala618"
+                 class="contact__social-link"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="GitHub Profil öffnen">
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <nav class="footer__links" aria-label="Footer Navigation">
+        <a href="impressum.html"   class="footer__link">Impressum</a>
+        <a href="datenschutz.html" class="footer__link">Datenschutz</a>
+      </nav>
+      <p class="footer__copy">© 2026 Damla Gedikli. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

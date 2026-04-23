@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ease – Application Invention Projekt von Damla Gedikli." />
+  <title>Ease – Damla Gedikli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../materials/dg-logo-favicon.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="custom-cursor"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="../index.html" class="nav__logo" aria-label="Zur Startseite">
+        <img src="../materials/dg-logo-no-bg.png"
+             alt="DG Logo"
+             class="nav__logo-icon" />
+        <span class="nav__logo-name">Damla Gedikli</span>
+      </a>
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="../index.html#projekte"   class="nav__link is-active">Projekte</a>
+        <a href="../index.html#ueber-mich" class="nav__link">Über mich</a>
+        <a href="../index.html#kontakt"    class="nav__link">Kontakt</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav__mobile" aria-label="Mobile Navigation">
+      <a href="../index.html#projekte"   class="nav__mobile-link">Projekte</a>
+      <a href="../index.html#ueber-mich" class="nav__mobile-link">Über mich</a>
+      <a href="../index.html#kontakt"    class="nav__mobile-link">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="project-detail container">
+
+      <header class="project-detail__header fade-in">
+        <h1 class="project-detail__title">Ease: Application Invention</h1>
+        <div class="project-detail__tags" aria-label="Projektkategorien">
+          <span class="project-detail__tag">App Design</span>
+          <span class="project-detail__tag">Innovation</span>
+          <span class="project-detail__tag">Accessibility</span>
+          <span class="project-detail__tag">Mental Health</span>
+        </div>
+      </header>
+
+      <div class="project-slider fade-in fade-in--delay" aria-label="Projekt-Bilder">
+        <div class="project-slider__track">
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt6/img1.jpg" alt="Ease – Slide 1" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt6/img2.jpg" alt="Ease – Slide 2" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt6/img3.jpg" alt="Ease – Slide 3" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+        </div>
+        <div class="project-slider__dots" aria-label="Bild-Navigation"></div>
+      </div>
+
+      <div class="project-detail__intro-row">
+        <div class="project-detail__intro-text reveal">
+          <p>
+            Ease ist eine mobile Anwendung, die Menschen mit Angststörungen
+            und Stress durch geführte Atemübungen, körperorientierte
+            Techniken und ein personalisiertes Tagebuch unterstützt.
+          </p>
+          <br />
+          <p>
+            Das Interface ist bewusst ruhig und reizarm gestaltet – keine
+            grellen Farben, keine ablenkenden Animationen. Jede Interaktion
+            ist auf Entschleunigung ausgerichtet. Die App wurde in enger
+            Zusammenarbeit mit einer klinischen Psychologin konzipiert.
+          </p>
+        </div>
+        <aside class="project-info-box reveal" aria-label="Projektinformationen">
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Beratung</p>
+            <p class="project-info-box__value">Klinische Psychologin</p>
+          </div>
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Tools</p>
+            <p class="project-info-box__value">Figma, Principle</p>
+          </div>
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Zeitraum</p>
+            <p class="project-info-box__value">Wintersemester 2024/25</p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="project-section" aria-label="Designprinzipien">
+        <div class="project-section__grid">
+          <div class="project-section__img-wrap reveal-left">
+            <img src="../assets/projects/projekt6/img2.jpg" alt="Ruhiges Interface-Design" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-section__text reveal-right">
+            <h3>Calm Design</h3>
+            <p>
+              Das Designprinzip „Calm Technology" nach Mark Weiser bildete
+              die gestalterische Leitlinie. Alle UI-Elemente sind auf
+              kognitive Entlastung ausgerichtet: große Schrift, viel
+              Weißraum, sanfte Übergänge, gedämpfte Farbpalette.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-label="Kernfunktionen">
+        <div class="project-section__grid project-section__grid--reversed">
+          <div class="project-section__img-wrap reveal-right">
+            <img src="../assets/projects/projekt6/img3.jpg" alt="Atemübungen und Tagebuch" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-section__text reveal-left">
+            <h3>Geführte Übungen</h3>
+            <p>
+              Geführte Atemübungen werden durch animierte, pulsierende
+              Formen begleitet, die die Atemfrequenz visuell vorgeben.
+              Das integrierte Tagebuch nutzt Stimmungserfassung mit
+              minimalem Aufwand – ein einfacher Slider, keine langen Texte.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <nav class="footer__links" aria-label="Footer Navigation">
+        <a href="../impressum.html"   class="footer__link">Impressum</a>
+        <a href="../datenschutz.html" class="footer__link">Datenschutz</a>
+      </nav>
+      <p class="footer__copy">© 2026 Damla Gedikli. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

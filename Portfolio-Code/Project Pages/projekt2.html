@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tea-Rex – Innovative Design Projekt von Damla Gedikli." />
+  <title>Tea-Rex – Damla Gedikli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../materials/dg-logo-favicon.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="custom-cursor"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="../index.html" class="nav__logo" aria-label="Zur Startseite">
+        <img src="../materials/dg-logo-no-bg.png"
+             alt="DG Logo"
+             class="nav__logo-icon" />
+        <span class="nav__logo-name">Damla Gedikli</span>
+      </a>
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="../index.html#projekte"   class="nav__link is-active">Projekte</a>
+        <a href="../index.html#ueber-mich" class="nav__link">Über mich</a>
+        <a href="../index.html#kontakt"    class="nav__link">Kontakt</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav__mobile" aria-label="Mobile Navigation">
+      <a href="../index.html#projekte"   class="nav__mobile-link">Projekte</a>
+      <a href="../index.html#ueber-mich" class="nav__mobile-link">Über mich</a>
+      <a href="../index.html#kontakt"    class="nav__mobile-link">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="project-detail container">
+
+      <header class="project-detail__header fade-in">
+        <h1 class="project-detail__title">Tea-Rex: Innovative Design</h1>
+        <div class="project-detail__tags" aria-label="Projektkategorien">
+          <span class="project-detail__tag">Produktdesign</span>
+          <span class="project-detail__tag">Innovation</span>
+          <span class="project-detail__tag">Prototyping</span>
+          <span class="project-detail__tag">User Research</span>
+        </div>
+      </header>
+
+      <div class="project-slider fade-in fade-in--delay" aria-label="Projekt-Bilder">
+        <div class="project-slider__track">
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt2/img1.jpg" alt="Tea-Rex – Slide 1" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt2/img2.jpg" alt="Tea-Rex – Slide 2" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt2/img3.jpg" alt="Tea-Rex – Slide 3" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+        </div>
+        <div class="project-slider__dots" aria-label="Bild-Navigation"></div>
+      </div>
+
+      <div class="project-detail__intro-row">
+        <div class="project-detail__intro-text reveal">
+          <p>
+            Tea-Rex ist ein innovatives Produktkonzept, das spielerisches
+            Teekochen mit einem interaktiven Erlebnis verbindet. Das
+            Projekt entstand im Rahmen eines Semesterprojekts zu
+            innovativem Produktdesign an der HfG Schwäbisch Gmünd.
+          </p>
+          <br />
+          <p>
+            Im Mittelpunkt stand die Frage: Wie kann ein alltäglicher
+            Vorgang – das Zubereiten von Tee – durch intelligentes Design
+            zu einem bewussteren, genussvolleren Ritual werden?
+          </p>
+        </div>
+        <aside class="project-info-box reveal" aria-label="Projektinformationen">
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Rolle</p>
+            <p class="project-info-box__value">Produktdesignerin</p>
+          </div>
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Zeitraum</p>
+            <p class="project-info-box__value">Wintersemester 2023/24</p>
+          </div>
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Hochschule</p>
+            <p class="project-info-box__value">HfG Schwäbisch Gmünd</p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="project-section" aria-label="Konzeptentwicklung">
+        <div class="project-section__grid">
+          <div class="project-section__img-wrap reveal-left">
+            <img src="../assets/projects/projekt2/img2.jpg" alt="Konzept-Skizzen" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-section__text reveal-right">
+            <h3>Konzept und Ideenfindung</h3>
+            <p>
+              Durch Brainstorming, Moodboards und Designprinzipien-Workshops
+              entstand die Idee des Tea-Rex: Ein Teekocher, dessen Form an
+              einen kleinen Dinosaurier erinnert und gleichzeitig klare
+              funktionale Hinweise gibt – Temperatur wird durch Farbe
+              kommuniziert, Aufgusszeit durch eine sanfte Melodie signalisiert.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-label="Prototyping">
+        <div class="project-section__grid project-section__grid--reversed">
+          <div class="project-section__img-wrap reveal-right">
+            <img src="../assets/projects/projekt2/img3.jpg" alt="Physischer Prototyp" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-section__text reveal-left">
+            <h3>Prototyp und Testing</h3>
+            <p>
+              Ein physischer Prototyp wurde mit 3D-Druck und Arduino
+              realisiert. Nutzertests zeigten, dass die spielerische
+              Gestaltung die Aufmerksamkeit für den Teevorgang erhöht
+              und die Nutzerinnen und Nutzer bewusster mit Temperatur
+              und Ziehzeit umgehen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <nav class="footer__links" aria-label="Footer Navigation">
+        <a href="../impressum.html"   class="footer__link">Impressum</a>
+        <a href="../datenschutz.html" class="footer__link">Datenschutz</a>
+      </nav>
+      <p class="footer__copy">© 2026 Damla Gedikli. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

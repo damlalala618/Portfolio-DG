@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alle Projekte von Damla Gedikli – Interaction Design, UX, Datenvisualisierung und mehr." />
+  <title>Projekte – Damla Gedikli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="materials/dg-logo-favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="custom-cursor"></div>
+
+  <!-- ══════════════════════════ NAVIGATION ══════════════════════════ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo" aria-label="Zur Startseite">
+        <img src="materials/dg-logo-no-bg.png"
+             alt="DG Logo"
+             class="nav__logo-icon" />
+        <span class="nav__logo-name">Damla Gedikli</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="index.html#projekte"   class="nav__link is-active">Projekte</a>
+        <a href="index.html#ueber-mich" class="nav__link">Über mich</a>
+        <a href="index.html#kontakt"    class="nav__link">Kontakt</a>
+      </nav>
+
+      <button class="nav__hamburger"
+              aria-label="Menü öffnen"
+              aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav__mobile" aria-label="Mobile Navigation">
+      <a href="index.html#projekte"   class="nav__mobile-link">Projekte</a>
+      <a href="index.html#ueber-mich" class="nav__mobile-link">Über mich</a>
+      <a href="index.html#kontakt"    class="nav__mobile-link">Kontakt</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ════════════════════════ PAGE HEADER ════════════════════════ -->
+    <div class="page-header container">
+      <h1 class="page-header__title reveal">Projekte</h1>
+      <p class="page-header__intro reveal">
+        Hier sind einige der Projekte, an denen ich gearbeitet habe.
+        Vom App-Design bis hin zu Benutzeroberflächen habe ich Erfahrung
+        in einer Vielzahl von Designbereichen.
+      </p>
+    </div>
+
+
+    <!-- ════════════════════════ PROJECTS GRID ══════════════════════ -->
+    <section class="container" aria-label="Projektübersicht">
+      <div class="projects-overview__grid stagger" role="list">
+
+        <!-- Projekt 1 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt1.html"
+                 aria-label="Rapido Reisemobile – Redesign">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt1/preview.jpg"
+                 alt="Rapido Reisemobile Redesign"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">Rapido Reisemobile &nbsp;|&nbsp; Redesign</h3>
+        </article>
+
+        <!-- Projekt 2 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt2.html"
+                 aria-label="Tea-Rex – Innovative Design">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt2/preview.jpg"
+                 alt="Tea-Rex Innovative Design"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">Tea-Rex &nbsp;|&nbsp; Innovative Design</h3>
+        </article>
+
+        <!-- Projekt 3 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt3.html"
+                 aria-label="World Life Expectancy – Datenvisualisierung">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt3/preview.jpg"
+                 alt="World Life Expectancy Datenvisualisierung"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">World Life Expectancy &nbsp;|&nbsp; Datenvisualisierung</h3>
+        </article>
+
+        <!-- Projekt 4 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt4.html"
+                 aria-label="Timelapse – Watchface Design">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt4/preview.jpg"
+                 alt="Timelapse Watchface Design"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">Timelapse &nbsp;|&nbsp; Watchface Design</h3>
+        </article>
+
+        <!-- Projekt 5 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt5.html"
+                 aria-label="GrippR – Controller Interface Design">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt5/preview.jpg"
+                 alt="GrippR Controller Interface Design"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">GrippR &nbsp;|&nbsp; Controller Interface Design</h3>
+        </article>
+
+        <!-- Projekt 6 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt6.html"
+                 aria-label="Ease – Application Invention">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt6/preview.jpg"
+                 alt="Ease Application Invention"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">Ease &nbsp;|&nbsp; Application Invention</h3>
+        </article>
+
+        <!-- Projekt 7 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt7.html"
+                 aria-label="Pup the Bub – Interactive Interfaces">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt7/preview.jpg"
+                 alt="Pup the Bub Interactive Interfaces"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">Pup the Bub &nbsp;|&nbsp; Interactive Interfaces</h3>
+        </article>
+
+        <!-- Projekt 8 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt8.html"
+                 aria-label="Who are you when no one is watching?">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt8/preview.jpg"
+                 alt="Who are you when no one is watching?"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">Who are you when no one is watching?</h3>
+        </article>
+
+        <!-- Projekt 9 -->
+        <article class="project-card" role="listitem"
+                 data-href="Project Pages/projekt9.html"
+                 aria-label="VoLo – Brand Corporate Design">
+          <div class="project-card__img-wrap">
+            <img src="assets/projects/projekt9/preview.jpg"
+                 alt="VoLo Brand Corporate Design"
+                 class="project-card__img" loading="lazy"
+                 onerror="this.style.display='none'" />
+          </div>
+          <div class="project-card__overlay" aria-hidden="true"></div>
+          <h3 class="project-card__title">VoLo &nbsp;|&nbsp; Brand Corporate Design</h3>
+        </article>
+
+      </div><!-- /projects-overview__grid -->
+
+      <!-- "More coming soon" notice -->
+      <div class="projects-more reveal">
+        <p class="projects-more__text">
+          more projects <span>coming soon</span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <nav class="footer__links" aria-label="Footer Navigation">
+        <a href="impressum.html"   class="footer__link">Impressum</a>
+        <a href="datenschutz.html" class="footer__link">Datenschutz</a>
+      </nav>
+      <p class="footer__copy">© 2026 Damla Gedikli. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

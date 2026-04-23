@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pup the Bub – Interactive Interfaces Projekt von Damla Gedikli." />
+  <title>Pup the Bub – Damla Gedikli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../materials/dg-logo-favicon.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="custom-cursor"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="../index.html" class="nav__logo" aria-label="Zur Startseite">
+        <img src="../materials/dg-logo-no-bg.png"
+             alt="DG Logo"
+             class="nav__logo-icon" />
+        <span class="nav__logo-name">Damla Gedikli</span>
+      </a>
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="../index.html#projekte"   class="nav__link is-active">Projekte</a>
+        <a href="../index.html#ueber-mich" class="nav__link">Über mich</a>
+        <a href="../index.html#kontakt"    class="nav__link">Kontakt</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav__mobile" aria-label="Mobile Navigation">
+      <a href="../index.html#projekte"   class="nav__mobile-link">Projekte</a>
+      <a href="../index.html#ueber-mich" class="nav__mobile-link">Über mich</a>
+      <a href="../index.html#kontakt"    class="nav__mobile-link">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="project-detail container">
+
+      <header class="project-detail__header fade-in">
+        <h1 class="project-detail__title">Pup the Bub: Interactive Interfaces</h1>
+        <div class="project-detail__tags" aria-label="Projektkategorien">
+          <span class="project-detail__tag">Interactive Design</span>
+          <span class="project-detail__tag">Playful UX</span>
+          <span class="project-detail__tag">UI Design</span>
+          <span class="project-detail__tag">Children</span>
+        </div>
+      </header>
+
+      <div class="project-slider fade-in fade-in--delay" aria-label="Projekt-Bilder">
+        <div class="project-slider__track">
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt7/img1.jpg" alt="Pup the Bub – Slide 1" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt7/img2.jpg" alt="Pup the Bub – Slide 2" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+          <div class="project-slider__slide">
+            <img src="../assets/projects/projekt7/img3.jpg" alt="Pup the Bub – Slide 3" onerror="this.closest('.project-slider__slide').style.background='var(--bg-card)'" />
+          </div>
+        </div>
+        <div class="project-slider__dots" aria-label="Bild-Navigation"></div>
+      </div>
+
+      <div class="project-detail__intro-row">
+        <div class="project-detail__intro-text reveal">
+          <p>
+            Pup the Bub ist eine interaktive Lernoberfläche für Kinder
+            im Vorschulalter, die durch spielerische Interaktionen mit
+            einem virtuellen Welpen grundlegende digitale Kompetenzen
+            und emotionale Intelligenz fördert.
+          </p>
+          <br />
+          <p>
+            Das Interface setzt auf großflächige, haptisch wirkende
+            UI-Elemente, lebhafte Animationen und ein KI-gestütztes
+            Reaktionssystem, das auf das Interaktionsverhalten des Kindes
+            eingeht und individuelle Lernpfade anpasst.
+          </p>
+        </div>
+        <aside class="project-info-box reveal" aria-label="Projektinformationen">
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Zielgruppe</p>
+            <p class="project-info-box__value">Kinder 3–6 Jahre</p>
+          </div>
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Tools</p>
+            <p class="project-info-box__value">Figma, After Effects, Rive</p>
+          </div>
+          <div class="project-info-box__section">
+            <p class="project-info-box__label">Zeitraum</p>
+            <p class="project-info-box__value">Sommersemester 2025</p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="project-section" aria-label="Charakterdesign">
+        <div class="project-section__grid">
+          <div class="project-section__img-wrap reveal-left">
+            <img src="../assets/projects/projekt7/img2.jpg" alt="Charakterentwicklung" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-section__text reveal-right">
+            <h3>Charakterentwicklung</h3>
+            <p>
+              Der virtuelle Welpe Bub wurde durch mehrere Iterationen
+              kindgerechter Charakterdesigns entwickelt. Expressive
+              Augen, übertriebene Proportionen und klare Körpersprache
+              machen seine emotionalen Zustände sofort verständlich –
+              auch für Vorschulkinder.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section" aria-label="Spielmechaniken">
+        <div class="project-section__grid project-section__grid--reversed">
+          <div class="project-section__img-wrap reveal-right">
+            <img src="../assets/projects/projekt7/img3.jpg" alt="Spielmechaniken und Lernmodule" loading="lazy" onerror="this.style.display='none'" />
+          </div>
+          <div class="project-section__text reveal-left">
+            <h3>Spielbasiertes Lernen</h3>
+            <p>
+              Minispiele zum Füttern, Pflegen und Spielen mit Bub
+              vermitteln Konzepte wie Empathie, Verantwortung und
+              Problemlösung. Eltern können über ein Dashboard
+              Lernfortschritte verfolgen und Inhalte anpassen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <nav class="footer__links" aria-label="Footer Navigation">
+        <a href="../impressum.html"   class="footer__link">Impressum</a>
+        <a href="../datenschutz.html" class="footer__link">Datenschutz</a>
+      </nav>
+      <p class="footer__copy">© 2026 Damla Gedikli. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
