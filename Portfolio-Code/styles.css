@@ -431,7 +431,7 @@ em {
 }
 
 .project-card__img-wrap {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   background: var(--bg-card);
   border-radius: var(--r-md);
   overflow: hidden;
@@ -452,12 +452,12 @@ em {
 .project-card:hover .project-card__img { transform: scale(1.06); }
 
 .project-card__title {
-  margin-top: var(--s2);
+  margin-top: var(--s1);
   font-size: 0.88rem;
   font-weight: 400;
   color: var(--text-soft);
   /* sits outside the rounded image box */
-  padding-inline: 2px;
+  padding-inline: 4px;
 }
 
 .section__cta {
@@ -680,15 +680,22 @@ em {
 .skill-icon:nth-child(7) { animation-delay: 1.3s; }
 .skill-icon:nth-child(8) { animation-delay: 1.8s; }
 
-/* Brand colours */
-.skill-icon--figma   { background: linear-gradient(135deg, #F24E1E, #A259FF); }
-.skill-icon--ai      { background: #FF9A00; }
-.skill-icon--ae      { background: #00005B; color: #9999FF; }
-.skill-icon--ps      { background: #001E36; color: #31A8FF; }
-.skill-icon--sketch  { background: linear-gradient(135deg, #F7B500, #E66000); }
-.skill-icon--html    { background: #E44D26; }
-.skill-icon--css     { background: #264DE4; }
-.skill-icon--blender { background: #EA7600; }
+/* Brand colours removed – now using PNG images */
+.skill-icon--figma,
+.skill-icon--ai,
+.skill-icon--ae,
+.skill-icon--ps,
+.skill-icon--protopie,
+.skill-icon--html,
+.skill-icon--css,
+.skill-icon--blender { background: transparent; box-shadow: none; }
+
+.skill-icon__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--r-md);
+}
 
 .skill-icon__label {
   font-size: 0.78rem;
@@ -740,6 +747,11 @@ em {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  padding: 10px 16px;
+  text-decoration: none;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
   transition: color var(--t-fast);
 }
 .contact__social-link:hover { color: var(--blue-700); }
@@ -880,6 +892,28 @@ em {
   width: 100%; height: 100%;
   object-fit: cover;
 }
+.project-slider__slide--video {
+  background: #000;
+}
+.project-slider__slide--video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.project-slider > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.project-slider > iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
 
 .project-slider__dots {
   position: absolute;
@@ -966,7 +1000,7 @@ em {
 .project-section__img-wrap {
   border-radius: var(--r-lg);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   background: var(--bg-card);
 }
 .project-section__img-wrap img {

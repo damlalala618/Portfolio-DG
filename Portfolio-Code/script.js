@@ -69,7 +69,7 @@ function initSmoothScroll() {
         10
       ) || 72;
 
-      const top = target.getBoundingClientRect().top + window.scrollY - navH;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH + 104;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
