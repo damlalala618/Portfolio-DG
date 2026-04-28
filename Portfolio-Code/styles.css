@@ -504,7 +504,7 @@ em {
 /* About slideshow */
 .about__slideshow {
   position: relative;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 3 / 2;
   border-radius: var(--r-lg);
   overflow: hidden;
   background: var(--bg-card);
@@ -597,7 +597,8 @@ em {
 
 /* ── 09. SKILLS SECTION ────────────────────────────────────── */
 .skills {
-  background: linear-gradient(140deg, var(--bg-skills), var(--bg-skills-end));
+  background: url('../images-home/Meine-Skills-bg.png') center center / cover no-repeat;
+  min-height: 600px;
   position: relative;
   overflow: hidden;
 }
@@ -647,7 +648,8 @@ em {
 .skills__icons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--s3);
+  row-gap: 80px;
+  column-gap: var(--s3);
   justify-items: center;
 }
 
