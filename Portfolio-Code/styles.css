@@ -1121,6 +1121,104 @@ em {
   to   { opacity: 1; transform: translateX(0);     }
 }
 
+/* ── 15b. PROJECT CAROUSEL ─────────────────────────────────── */
+.project-carousel {
+  margin-top: var(--s7);
+  margin-bottom: var(--s5);
+}
+
+.project-carousel__track-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-carousel__track {
+  display: flex;
+  gap: var(--s4);
+  transition: transform 0.5s var(--ease);
+  will-change: transform;
+}
+
+/* Each slide matches project-card width: ~1/3 of container, showing ~2.3 visible + peek */
+.project-carousel__slide {
+  flex: 0 0 calc((100% - var(--s4) * 2) / 2.3);
+  min-width: 0;
+}
+
+.project-carousel__img-wrap {
+  aspect-ratio: 3 / 2;
+  background: var(--bg-card);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+.project-carousel__slide:hover .project-carousel__img-wrap {
+  transform: translateY(-6px);
+  box-shadow: var(--sh-lg);
+}
+
+.project-carousel__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--t-slow);
+}
+.project-carousel__slide:hover .project-carousel__img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Prev / Next buttons */
+.project-carousel__btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  background: transparent;
+  color: var(--blue-900);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity var(--t-med);
+}
+.project-carousel__btn--prev { left: 0; }
+.project-carousel__btn--next { right: 0; }
+
+/* Show arrow only when hovering the respective edge zone */
+.project-carousel__btn--prev:hover,
+.project-carousel__track-wrap:has(.project-carousel__btn--prev:hover) .project-carousel__btn--prev {
+  opacity: 1;
+}
+.project-carousel__btn--next:hover,
+.project-carousel__track-wrap:has(.project-carousel__btn--next:hover) .project-carousel__btn--next {
+  opacity: 1;
+}
+
+.project-carousel__btn-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--sh-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transition: background var(--t-fast), transform var(--t-fast);
+}
+.project-carousel__btn:hover .project-carousel__btn-icon {
+  background: var(--white);
+  transform: scale(1.08);
+}
+
+/* Dots – removed */
+.project-carousel__dots { display: none; }
+
 /* ── 16. RESPONSIVE – TABLET (≤ 900px) ────────────────────── */
 @media (max-width: 900px) {
   .nav__links    { display: none; }

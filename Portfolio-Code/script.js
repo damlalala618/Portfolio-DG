@@ -210,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initCustomCursor();
   initAboutSlideshow();
+  initProjectCarousel();
 });
 
 /* ── ABOUT SLIDESHOW ───────────────────────────────────────── */
@@ -300,4 +301,109 @@ function initCustomCursor() {
       ctx.stroke();
     }
   })();
+}
+
+/* ── 9. PROJECT CAROUSEL ───────────────────────────────────── */
+function initProjectCarousel() {
+  document.querySelectorAll('.project-carousel').forEach(carousel => {
+    const track    = carousel.querySelector('.project-carousel__track');
+    const slides   = carousel.querySelectorAll('.project-carousel__slide');
+    const dotsWrap = carousel.querySelector('.project-carousel__dots');
+    const btnPrev  = carousel.querySelector('.project-carousel__btn--prev');
+    const btnNext  = carousel.querySelector('.project-carousel__btn--next');
+    if (!track || slides.length === 0) return;
+
+    let current = 0;
+    const total = slides.length;
+    const wrap  = carousel.querySelector('.project-carousel__track-wrap');
+
+    // Build dots
+    if (dotsWrap) {
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'project-carousel__dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', `Bild ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function getSlideWidth() {
+      const gap = parseFloat(getComputedStyle(track).gap) || 32;
+      return slides[0].offsetWidth + gap;
+    }
+
+    function goTo(index) {
+      const slideWidth = getSlideWidth();
+      const maxOffset  = Math.max(0, track.scrollWidth - wrap.offsetWidth);
+      const rawOffset  = index * slideWidth;
+      const offset     = Math.max(0, Math.min(rawOffset, maxOffset));
+      current = Math.round(offset / slideWidth);
+      track.style.transform = `translateX(-${offset}px)`;
+      if (dotsWrap) {
+        dotsWrap.querySelectorAll('.project-carousel__dot').forEach((d, i) => {
+          d.classList.toggle('is-active', i === current);
+        });
+      }
+    }
+
+    if (btnPrev) btnPrev.addEventListener('click', () => goTo(current - 1));
+    if (btnNext) btnNext.addEventListener('click', () => goTo(current + 1));
+
+    // Touch / swipe
+    let startX = 0;
+    wrap.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    wrap.addEventListener('touchend', e => {
+      const delta = startX - e.changedTouches[0].clientX;
+      if (Math.abs(delta) > 50) goTo(current + (delta > 0 ? 1 : -1));
+    });
+
+    // Mouse drag (click-and-drag)
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragAccum  = 0;
+
+    wrap.addEventListener('mousedown', e => {
+      isDragging = true;
+      dragStartX = e.clientX;
+      dragAccum  = 0;
+      wrap.style.cursor = 'grabbing';
+      e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (!isDragging) return;
+      dragAccum = dragStartX - e.clientX;
+      const slideWidth = getSlideWidth();
+      const maxOffset  = Math.max(0, track.scrollWidth - wrap.offsetWidth);
+      const rawOffset  = current * slideWidth + dragAccum;
+      const offset     = Math.max(0, Math.min(rawOffset, maxOffset));
+      track.style.transition = 'none';
+      track.style.transform  = `translateX(-${offset}px)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      wrap.style.cursor = 'grab';
+      track.style.transition = '';
+      if (Math.abs(dragAccum) > 60) {
+        goTo(current + (dragAccum > 0 ? 1 : -1));
+      } else {
+        goTo(current); // snap back
+      }
+    });
+
+    // Trackpad horizontal wheel scroll
+    wrap.addEventListener('wheel', e => {
+      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) return; // ignore vertical scroll
+      e.preventDefault();
+      if (e.deltaX > 30)       goTo(current + 1);
+      else if (e.deltaX < -30) goTo(current - 1);
+    }, { passive: false });
+
+    wrap.style.cursor = 'grab';
+  });
 }
