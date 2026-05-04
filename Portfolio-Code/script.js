@@ -211,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCustomCursor();
   initAboutSlideshow();
   initProjectCarousel();
+  initLightbox();
 });
 
 /* ── ABOUT SLIDESHOW ───────────────────────────────────────── */
@@ -405,5 +406,46 @@ function initProjectCarousel() {
     }, { passive: false });
 
     wrap.style.cursor = 'grab';
+  });
+}
+
+/* ── 10. LIGHTBOX ─────────────────────────────────────────── */
+function initLightbox() {
+  // Create overlay once
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  const img = document.createElement('img');
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+
+  function open(src, alt) {
+    img.src = src;
+    img.alt = alt || '';
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  // Close on overlay click (outside image)
+  overlay.addEventListener('click', e => {
+    if (e.target !== img) close();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+  });
+
+  // Attach click listeners to all carousel images
+  document.querySelectorAll('.project-carousel__img-wrap img').forEach(image => {
+    image.style.cursor = 'zoom-in';
+    image.addEventListener('click', e => {
+      e.stopPropagation();
+      open(image.src, image.alt);
+    });
   });
 }

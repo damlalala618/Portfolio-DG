@@ -916,6 +916,12 @@ em {
   border: none;
   display: block;
 }
+.project-slider > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .project-slider__dots {
   position: absolute;
@@ -1005,9 +1011,11 @@ em {
   aspect-ratio: 3 / 2;
   background: var(--bg-card);
 }
-.project-section__img-wrap img {
+.project-section__img-wrap img,
+.project-section__img-wrap video {
   width: 100%; height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .project-section__text h3 {
@@ -1134,15 +1142,16 @@ em {
 
 .project-carousel__track {
   display: flex;
-  gap: var(--s4);
+  gap: var(--s2);
   transition: transform 0.5s var(--ease);
   will-change: transform;
 }
 
 /* Each slide matches project-card width: ~1/3 of container, showing ~2.3 visible + peek */
 .project-carousel__slide {
-  flex: 0 0 calc((100% - var(--s4) * 2) / 2.3);
+  flex: 0 0 calc((100% - var(--s2) * 2) / 2.3);
   min-width: 0;
+  cursor: pointer;
 }
 
 .project-carousel__img-wrap {
@@ -1207,9 +1216,36 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-  transition: background var(--t-fast), transform var(--t-fast);
+}
+
+/* ── LIGHTBOX ─────────────────────────────────────────────── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.lightbox-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--r-md);
+  box-shadow: 0 8px 60px rgba(0,0,0,0.6);
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+}
+.lightbox-overlay.is-open img {
+  transform: scale(1);
 }
 .project-carousel__btn:hover .project-carousel__btn-icon {
   background: var(--white);
