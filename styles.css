@@ -597,7 +597,7 @@ em {
 
 /* ── 09. SKILLS SECTION ────────────────────────────────────── */
 .skills {
-  background: url('../images-home/Meine-Skills-bg.png') center center / cover no-repeat;
+  background: url('home-assets/Meine-Skills-bg.png') center center / cover no-repeat;
   min-height: 600px;
   position: relative;
   overflow: hidden;
@@ -1153,7 +1153,7 @@ em {
   left: 0;
   width: 44px;
   height: 44px;
-  background-image: url('materials/dg-cursor-.png');
+  background-image: url('home-assets/dg-cursor-.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1163,7 +1163,7 @@ em {
 }
 
 #custom-cursor.is-clicked {
-  background-image: url('materials/dg-cursor-click.png');
+  background-image: url('home-assets/dg-cursor-click.png');
 }
 
 #cursor-trail-canvas {

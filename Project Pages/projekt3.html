@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ease – Application Invention Projekt von Damla Gedikli." />
-  <title>Ease – Damla Gedikli</title>
+  <meta name="description" content="World Life Expectancy – Datenvisualisierung Projekt von Damla Gedikli." />
+  <title>World Life Expectancy – Damla Gedikli</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet" />
@@ -44,95 +44,80 @@
     <article class="project-detail container">
 
       <header class="project-detail__header fade-in">
-        <h1 class="project-detail__title">Ease: Application Invention</h1>
+        <h1 class="project-detail__title">World Life Expectancy: Datenvisualisierung</h1>
         <div class="project-detail__tags" aria-label="Projektkategorien">
-          <span class="project-detail__tag">App Design</span>
-          <span class="project-detail__tag">Innovation</span>
-          <span class="project-detail__tag">Accessibility</span>
-          <span class="project-detail__tag">Mental Health</span>
+          <span class="project-detail__tag">Data Visualization</span>
+          <span class="project-detail__tag">Information Design</span>
+          <span class="project-detail__tag">D3.js</span>
+          <span class="project-detail__tag">Research</span>
         </div>
       </header>
 
       <div class="project-slider fade-in fade-in--delay" aria-label="Projekt-Bild">
-        <img src="../projects-materials/project-6/project-6.1.png" alt="Ease" onerror="this.style.display='none'" />
+        <img src="../projects-assets/project-3/project-3.0.png" alt="World Life Expectancy" onerror="this.style.display='none'" />
       </div>
 
       <div class="project-detail__intro-full reveal">
         <p>
-          Ease ist eine mobile Anwendung, die Menschen mit Angststörungen
-          und Stress durch geführte Atemübungen, körperorientierte
-          Techniken und ein personalisiertes Tagebuch unterstützt.
+          Dieses Projekt visualisiert globale Lebenserwartungsdaten der WHO
+          in einer interaktiven, webbasierten Anwendung. Ziel war es,
+          komplexe geopolitische Zusammenhänge und gesundheitliche
+          Ungleichheiten durch klare visuelle Sprache zugänglich zu machen.
         </p>
         <br />
         <p>
-          Das Interface ist bewusst ruhig und reizarm gestaltet – keine
-          grellen Farben, keine ablenkenden Animationen. Jede Interaktion
-          ist auf Entschleunigung ausgerichtet. Die App wurde in enger
-          Zusammenarbeit mit einer klinischen Psychologin konzipiert.
+          Die Visualisierung ermöglicht es Nutzerinnen und Nutzern,
+          Länder nach Kontinent, Einkommensniveau und Zeitraum zu
+          filtern – und Korrelationen zwischen Lebenserwartung,
+          Gesundheitsausgaben und sozioökonomischen Faktoren zu entdecken.
         </p>
       </div>
       <aside class="project-info-box project-info-box--bar reveal" aria-label="Projektinformationen">
         <div class="project-info-box__section">
-          <p class="project-info-box__label">Beratung</p>
-          <p class="project-info-box__value">Klinische Psychologin</p>
-        </div>
-        <div class="project-info-box__section">
           <p class="project-info-box__label">Tools</p>
-          <p class="project-info-box__value">Figma, Principle</p>
+          <p class="project-info-box__value">D3.js, Observable, Figma</p>
         </div>
         <div class="project-info-box__section">
           <p class="project-info-box__label">Zeitraum</p>
-          <p class="project-info-box__value">Wintersemester 2024/25</p>
+          <p class="project-info-box__value">Sommersemester 2024</p>
+        </div>
+        <div class="project-info-box__section">
+          <p class="project-info-box__label">Datenquelle</p>
+          <p class="project-info-box__value">WHO Global Health Observatory</p>
         </div>
       </aside>
 
-      <section class="project-section" aria-label="Designprinzipien">
+      <section class="project-section" aria-label="Datenanalyse">
         <div class="project-section__grid">
           <div class="project-section__img-wrap reveal-left">
-            <img src="../projects-materials/project-6/project-6.2.png" alt="Ruhiges Interface-Design" loading="lazy" onerror="this.style.display='none'" />
+            <img src="../projects-assets/project-3/project-3.1.png" alt="Datenanalyse und Konzept" loading="lazy" onerror="this.style.display='none'" />
           </div>
           <div class="project-section__text reveal-right">
-            <h3>Calm Design</h3>
+            <h3>Datenauswahl und Konzept</h3>
             <p>
-              Das Designprinzip „Calm Technology" nach Mark Weiser bildete
-              die gestalterische Leitlinie. Alle UI-Elemente sind auf
-              kognitive Entlastung ausgerichtet: große Schrift, viel
-              Weißraum, sanfte Übergänge, gedämpfte Farbpalette.
+              Aus dem WHO-Datensatz wurden relevante Indikatoren
+              herausgefiltert: Lebenserwartung bei Geburt, Kindersterblichkeit,
+              Gesundheitsausgaben pro Kopf und Alphabetisierungsrate.
+              Jeder Datenpunkt wurde auf Vollständigkeit und Aktualität
+              geprüft, bevor er in die Visualisierung einfloss.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="project-section" aria-label="Kernfunktionen">
+      <section class="project-section" aria-label="Visualisierungsdesign">
         <div class="project-section__grid project-section__grid--reversed">
           <div class="project-section__img-wrap reveal-right">
-            <img src="../projects-materials/project-6/project-6.4.png" alt="Atemübungen und Tagebuch" loading="lazy" onerror="this.style.display='none'" />
+            <img src="../projects-assets/project-3/project-3.2.png" alt="Interaktive Choroplethenkarte" loading="lazy" onerror="this.style.display='none'" />
           </div>
           <div class="project-section__text reveal-left">
-            <h3>Geführte Übungen</h3>
+            <h3>Interaktive Visualisierung</h3>
             <p>
-              Geführte Atemübungen werden durch animierte, pulsierende
-              Formen begleitet, die die Atemfrequenz visuell vorgeben.
-              Das integrierte Tagebuch nutzt Stimmungserfassung mit
-              minimalem Aufwand – ein einfacher Slider, keine langen Texte.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="project-section" aria-label="Nutzerforschung">
-        <div class="project-section__grid">
-          <div class="project-section__img-wrap reveal-left">
-            <img src="../assets/projects/projekt6/img4.jpg" alt="Nutzerforschung und Prototyping" loading="lazy" onerror="this.style.display='none'" />
-          </div>
-          <div class="project-section__text reveal-right">
-            <h3>Nutzerforschung & Prototyping</h3>
-            <p>
-              In mehreren Testzyklen mit Betroffenen wurde das Interface
-              iterativ verfeinert. Nutzerfeedback floss direkt in die
-              Überarbeitung der Navigation und der Interaktionsmuster ein –
-              das Ergebnis ist eine Anwendung, die sich natürlich und
-              unterstützend anfühlt.
+              Die Hauptansicht zeigt eine animierte Choroplethenkarte,
+              auf der Länder farblich nach Lebenserwartung kodiert sind.
+              Ein Streudiagramm daneben erlaubt den direkten Vergleich
+              zweier Variablen. Alle Elemente sind durch Hover-Tooltips
+              und animierte Übergänge miteinander verknüpft.
             </p>
           </div>
         </div>
@@ -144,22 +129,17 @@
           <div class="project-carousel__track">
             <div class="project-carousel__slide">
               <div class="project-carousel__img-wrap">
-                <img src="../assets/projects/projekt6/carousel1.jpg" alt="Projektbild 1" loading="lazy" onerror="this.style.display='none'" />
+                <img src="../projects-assets/project-3/project-3-c-1.png" alt="Projektbild 1" loading="lazy" onerror="this.style.display='none'" />
               </div>
             </div>
             <div class="project-carousel__slide">
               <div class="project-carousel__img-wrap">
-                <img src="../assets/projects/projekt6/carousel2.jpg" alt="Projektbild 2" loading="lazy" onerror="this.style.display='none'" />
+                <img src="../projects-assets/project-3/project-3-c-2.png" alt="Projektbild 2" loading="lazy" onerror="this.style.display='none'" />
               </div>
             </div>
             <div class="project-carousel__slide">
               <div class="project-carousel__img-wrap">
-                <img src="../assets/projects/projekt6/carousel3.jpg" alt="Projektbild 3" loading="lazy" onerror="this.style.display='none'" />
-              </div>
-            </div>
-            <div class="project-carousel__slide">
-              <div class="project-carousel__img-wrap">
-                <img src="../assets/projects/projekt6/carousel4.jpg" alt="Projektbild 4" loading="lazy" onerror="this.style.display='none'" />
+                <img src="../projects-assets/project-3/project-3-c-3.png" alt="Projektbild 3" loading="lazy" onerror="this.style.display='none'" />
               </div>
             </div>
           </div>
