@@ -959,6 +959,13 @@ em {
   line-height: 1.8;
 }
 
+/* Full-width intro text (new layout) */
+.project-detail__intro-full {
+  font-size: 1rem;
+  line-height: 1.8;
+  padding-block: var(--s5);
+}
+
 /* Info box */
 .project-info-box {
   background: var(--bg-card);
@@ -999,6 +1006,47 @@ em {
   align-items: center;
 }
 
+/* Three-column layout (image | text | info box) */
+.project-section__grid--three {
+  grid-template-columns: 1fr 1fr auto;
+}
+.project-section__grid--three .project-info-box {
+  width: 200px;
+  align-self: center;
+  position: static;
+}
+
+/* Intro column: text stacked above info box */
+.project-section__intro-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  justify-content: center;
+}
+.project-section__intro-col .project-info-box {
+  position: static;
+}
+
+/* Intro layout: grid on top, full-width bar below */
+.project-intro-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+/* Full-width horizontal info bar */
+.project-info-box--bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s4);
+  padding: var(--s3) var(--s4);
+  position: static;
+  margin-bottom: var(--s7);
+}
+.project-info-box--bar .project-info-box__section {
+  margin-bottom: 0;
+}
+
 /* Reversed layout (text left / image right) */
 .project-section__grid--reversed {
   direction: rtl;
@@ -1016,6 +1064,25 @@ em {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* ── SECTION SLIDESHOW ─────────────────────────────────────── */
+.section-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.section-slideshow__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.section-slideshow__slide.is-active {
+  opacity: 1;
+  position: relative;
 }
 
 .project-section__text h3 {
@@ -1278,6 +1345,7 @@ em {
   .project-info-box__section { margin-bottom: 0; }
 
   .project-section__grid          { grid-template-columns: 1fr; }
+  .project-section__grid--three   { grid-template-columns: 1fr; }
   .project-section__grid--reversed { direction: ltr; }
 }
 

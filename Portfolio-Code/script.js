@@ -212,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAboutSlideshow();
   initProjectCarousel();
   initLightbox();
+  initSectionSlideshows();
 });
 
 /* ── ABOUT SLIDESHOW ───────────────────────────────────────── */
@@ -447,5 +448,19 @@ function initLightbox() {
       e.stopPropagation();
       open(image.src, image.alt);
     });
+  });
+}
+
+/* ── 11. SECTION SLIDESHOWS ────────────────────────────────── */
+function initSectionSlideshows() {
+  document.querySelectorAll('.section-slideshow').forEach(show => {
+    const slides = Array.from(show.querySelectorAll('.section-slideshow__slide'));
+    if (slides.length < 2) return;
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('is-active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('is-active');
+    }, 5000);
   });
 }
