@@ -1047,6 +1047,17 @@ em {
   margin-bottom: 0;
 }
 
+/* Project intro text */
+.project-intro {
+  margin-bottom: var(--s7);
+}
+.project-intro p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 72ch;
+}
+
 /* Reversed layout (text left / image right) */
 .project-section__grid--reversed {
   direction: rtl;
