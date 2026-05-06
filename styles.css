@@ -719,6 +719,14 @@ em {
   height: auto;
   margin-inline: auto;
   margin-bottom: var(--s4);
+  animation: contact-sway 4s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes contact-sway {
+  0%   { transform: rotate(-20deg); }
+  50%  { transform: rotate(20deg); }
+  100% { transform: rotate(-20deg); }
 }
 
 .contact__title {
