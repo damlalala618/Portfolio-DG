@@ -470,11 +470,11 @@ em {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--s7);
-  align-items: start;
+  align-items: end;
 }
 
 .about__right {
-  margin-top: clamp(80px, 14vw, 180px);
+  margin-top: 0;
 }
 
 .about__intro-text {
@@ -724,9 +724,9 @@ em {
 }
 
 @keyframes contact-sway {
-  0%   { transform: rotate(-20deg); }
-  50%  { transform: rotate(20deg); }
-  100% { transform: rotate(-20deg); }
+  0%   { transform: rotate(-5deg); }
+  50%  { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
 }
 
 .contact__title {
