@@ -201,6 +201,10 @@ function initActiveNav() {
 
 /* ── INIT ALL ──────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
+  // Disable browser scroll restoration so page always starts at top on refresh
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+
   initNavScroll();
   initMobileNav();
   initSmoothScroll();
