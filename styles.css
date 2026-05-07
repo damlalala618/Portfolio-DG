@@ -1188,7 +1188,8 @@ em {
   background-position: center;
   pointer-events: none;
   z-index: 99999;
-  will-change: left, top;
+  will-change: transform;
+  transform: translate(-50%, -50%);
 }
 
 #custom-cursor.is-clicked {

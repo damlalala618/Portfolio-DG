@@ -268,7 +268,7 @@ function initCustomCursor() {
     cursor.style.top  = y + 'px';
 
     // Anchor trail to the centre of the cursor icon
-    points.push({ x: x + CURSOR_H * 0.5, y: y + CURSOR_H * 0.5, time: Date.now() });
+    points.push({ x: x, y: y, time: Date.now() });
   });
 
   document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
