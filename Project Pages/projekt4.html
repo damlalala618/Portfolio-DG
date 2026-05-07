@@ -69,7 +69,14 @@
       <section class="project-section" aria-label="Bubble Trouble">
         <div class="project-section__grid">
           <div class="project-section__img-wrap reveal-left">
-            <video src="../projects-assets/project-4/project-4-video-1.mov" autoplay muted loop playsinline></video>
+            <iframe
+              id="yt-bubble-trouble"
+              data-src="https://www.youtube.com/embed/QBSkarSgX5E?autoplay=1&mute=1&loop=1&playlist=QBSkarSgX5E&controls=0"
+              title="Bubble Trouble – Timelapse Watchface"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="width:100%; height:100%; border:0; display:block;">
+            </iframe>
           </div>
           <div class="project-section__text reveal-right">
             <h3>Bubble Trouble</h3>
@@ -88,7 +95,14 @@
       <section class="project-section" aria-label="Ball Fall">
         <div class="project-section__grid project-section__grid--reversed">
           <div class="project-section__img-wrap reveal-right">
-            <video src="../projects-assets/project-4/project-4-video-2.mov" autoplay muted loop playsinline></video>
+            <iframe
+              id="yt-ball-fall"
+              data-src="https://www.youtube.com/embed/azggsguJ_bU?autoplay=1&mute=1&loop=1&playlist=azggsguJ_bU&controls=0"
+              title="Ball Fall – Timelapse Watchface"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="width:100%; height:100%; border:0; display:block;">
+            </iframe>
           </div>
           <div class="project-section__text reveal-left">
             <h3>Ball Fall</h3>
@@ -107,7 +121,14 @@
       <section class="project-section" aria-label="NewTime">
         <div class="project-section__grid">
           <div class="project-section__img-wrap reveal-left">
-            <video src="../projects-assets/project-4/project-4-video-3.mov" autoplay muted loop playsinline></video>
+            <iframe
+              id="yt-newtime"
+              data-src="https://www.youtube.com/embed/MTsuuwQgQCo?autoplay=1&mute=1&loop=1&playlist=MTsuuwQgQCo&controls=0"
+              title="NewTime – Timelapse Watchface"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="width:100%; height:100%; border:0; display:block;">
+            </iframe>
           </div>
           <div class="project-section__text reveal-right">
             <h3>NewTime</h3>
@@ -137,5 +158,23 @@
   </footer>
 
   <script src="../script.js"></script>
+  <script>
+    (function () {
+      const iframes = document.querySelectorAll('iframe[data-src]');
+      if (!iframes.length) return;
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !entry.target.src) {
+              entry.target.src = entry.target.dataset.src;
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+      iframes.forEach(function (iframe) { observer.observe(iframe); });
+    })();
+  </script>
 </body>
 </html>

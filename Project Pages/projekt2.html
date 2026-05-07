@@ -48,7 +48,13 @@
       </header>
 
       <div class="project-slider fade-in fade-in--delay" aria-label="Projekt-Video">
-        <video src="../projects-assets/project-2/project-2-video.mp4" autoplay muted loop playsinline></video>
+        <iframe
+          id="yt-tearex-hero"
+          data-src="https://www.youtube.com/embed/4HgeREM5QKY?autoplay=1&mute=1&loop=1&playlist=4HgeREM5QKY&controls=0"
+          title="Tea-Rex – Projekt Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
 
       <aside class="project-info-box project-info-box--bar reveal" aria-label="Projektinformationen">
@@ -146,5 +152,23 @@
   </footer>
 
   <script src="../script.js"></script>
+  <script>
+    (function () {
+      const iframes = document.querySelectorAll('iframe[data-src]');
+      if (!iframes.length) return;
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !entry.target.src) {
+              entry.target.src = entry.target.dataset.src;
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+      iframes.forEach(function (iframe) { observer.observe(iframe); });
+    })();
+  </script>
 </body>
 </html>

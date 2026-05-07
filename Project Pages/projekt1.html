@@ -62,7 +62,13 @@
         The slider auto-advances and supports touch swipe.
       -->
       <div class="project-slider fade-in fade-in--delay" aria-label="Projekt-Video">
-        <video src="../projects-assets/project-1/project-1-video-.mp4" autoplay muted loop playsinline></video>
+        <iframe
+          id="yt-projekt1-hero"
+          data-src="https://www.youtube.com/embed/o1QMRmshFDI?autoplay=1&mute=1&loop=1&playlist=o1QMRmshFDI&controls=0"
+          title="Projekt 1 – Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
 
       <aside class="project-info-box project-info-box--bar reveal" aria-label="Projektinformationen">
@@ -245,5 +251,23 @@
   </footer>
 
   <script src="../script.js"></script>
+  <script>
+    (function () {
+      const iframes = document.querySelectorAll('iframe[data-src]');
+      if (!iframes.length) return;
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !entry.target.src) {
+              entry.target.src = entry.target.dataset.src;
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+      iframes.forEach(function (iframe) { observer.observe(iframe); });
+    })();
+  </script>
 </body>
 </html>
